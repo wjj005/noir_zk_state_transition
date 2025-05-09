@@ -1,0 +1,32 @@
+# Prover.toml for ZK Encrypted State Transition Proof
+
+# === Private Inputs ===
+# Scenario: User is updating their registered public key.
+user_identity_secret = "DAppDevMasterSecretID"
+
+old_state_param1 = "1001" # Old Public Key X
+old_state_param2 = "1002" # Old Public Key Y
+old_state_nonce = "0"     # Nonce for old key commitment (can be 0 if not used in hash)
+
+new_state_param1 = "2001" # New Public Key X
+new_state_param2 = "2002" # New Public Key Y
+message_nonce = "msgNonce123" # Nonce for this specific message/transition
+
+identity_blinding_factor = "idBlind789"
+new_state_blinding_factor = "newStateBlind456"
+
+# === Public Inputs ===
+# !!! CRITICAL: All hash values below are PLACEHOLDERS.
+# You MUST recompute these using the actual private inputs and pedersen_hash logic from main.nr.
+
+# user_identity_commitment = pedersen_hash(["DAppDevMasterSecretID", "idBlind789"])
+user_identity_commitment = "111..." # PLACEHOLDER - RECOMPUTE
+
+# old_state_commitment = pedersen_hash(["1001", "1002", "0"])
+old_state_commitment = "222..." # PLACEHOLDER - RECOMPUTE
+
+# new_state_commitment = pedersen_hash(["2001", "2002", "msgNonce123", "newStateBlind456"])
+new_state_commitment = "333..." # PLACEHOLDER - RECOMPUTE
+
+# This is a state update (not initial registration)
+is_state_update = "1" 

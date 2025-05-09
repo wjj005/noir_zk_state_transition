@@ -1,0 +1,12 @@
+# Verifier.toml for ZK Encrypted State Transition Proof
+
+# === Public Inputs ===
+# These MUST match the public inputs in Prover.toml (after recomputation of hashes).
+
+# !!! CRITICAL: These hash values are PLACEHOLDERS.
+# They must match the recomputed values from Prover.toml.
+user_identity_commitment = "111..." # PLACEHOLDER - MUST MATCH PROVER'S RECOMPUTED VALUE
+old_state_commitment = "222..."     # PLACEHOLDER - MUST MATCH PROVER'S RECOMPUTED VALUE
+new_state_commitment = "333..."     # PLACEHOLDER - MUST MATCH PROVER'S RECOMPUTED VALUE
+
+is_state_update = "1"
